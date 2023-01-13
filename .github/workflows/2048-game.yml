@@ -59,6 +59,10 @@ jobs:
            kustomize/resources/namespace.yaml
            kustomize/resources/deployment.yaml
            kustomize/resources/service.yaml
+     
+         login-server: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}
+         username: ${{ secrets.AZURE_REGISTRY_NAME }}
+         password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
          images: |
             ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/2048-game:${{ github.sha }}
               #test2
