@@ -61,4 +61,4 @@ jobs:
            kustomize/resources/service.yaml
          images: |
             ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/2048-game:${{ github.sha }}
-              #test1
+              #test2
