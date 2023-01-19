@@ -56,7 +56,8 @@ jobs:
          namespace: 'bookinfo'
          manifests: |
           kustomize/kustomization.yaml
-          manifest.yaml
+          kustomize/manifest.yaml
+          kustomize/namespace.yaml
      
          login-server: ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}
          username: ${{ secrets.AZURE_REGISTRY_NAME }}
