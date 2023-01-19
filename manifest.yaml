@@ -33,3 +33,4 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
+          #testing the IP Address http://20.237.113.44/
