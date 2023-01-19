@@ -1,4 +1,4 @@
-name: Build and Deploy BooksApp to AKS
+name: Build and Deploy booksapp to AKS
 
 on:
   push:
@@ -36,8 +36,8 @@ jobs:
          username: ${{ secrets.AZURE_REGISTRY_NAME }}
          password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
       - run: |
-         docker build . -t ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/BooksApp:${{ github.sha }}
-         docker push ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/BooksApp:${{ github.sha }}
+         docker build . -t ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/booksapp:${{ github.sha }}
+         docker push ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/booksapp:${{ github.sha }}
      
       - name: Set AKS context
         id: set-context
@@ -61,4 +61,4 @@ jobs:
          username: ${{ secrets.AZURE_REGISTRY_NAME }}
          password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
          images: |
-            ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/BooksApp:${{ github.sha }}
+            ${{ secrets.AZURE_REGISTRY_LOGIN_SERVER }}/booksapp:${{ github.sha }}
