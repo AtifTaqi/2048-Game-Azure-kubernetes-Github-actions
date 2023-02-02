@@ -12,6 +12,6 @@ Or you can just run `script/up` to do all of this.
 
 ## Cleaning up
 
-Run `script/down` to tear down the cluster and remove the load-balancer.
+Run `script/down` to tear down the cluster and remove the load-balancer
 
 **Note:** If you delete the cluster directly, the load-balancer will stick around and result in charges.
